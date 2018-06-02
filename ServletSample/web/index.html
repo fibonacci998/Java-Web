@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="SendServlet" method="post">
+            <p>
+                Enter your name:<input type="text" name="txtName" value="" />
+            </p>
+            <p>Select your gender:
+                <select name="txtGender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" name="rem">remember my name
+            </p>
+            <p>
+                <input type="submit" value="Send" name="btnSend" />
+            </p>
+            <p> View MyServlet check out
+                <a href="SendServlet?txtName=abc&txtGender=Male"> here
+                </a>
+            </p>
+            <p>View session click
+                <a href="SessionServlet">here </a>
+            </p>
+        </form>
+    </body>
+</html>

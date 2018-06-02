@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- values here are available for all services-->
+    <context-param>
+        <param-name>ConnectionString</param-name>
+        <param-value>jdbc:odbc:JdbcOdbcDriver</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.MyServlet</servlet-class>
+        <!-- values here are available for this servlet only-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123@123a</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>CalculateServlet</servlet-name>
+        <servlet-class>com.CalculateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>com.SessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/SendServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalculateServlet</servlet-name>
+        <url-pattern>/CalculateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/SessionServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
