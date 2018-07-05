@@ -70,18 +70,18 @@ public final class jspStudent_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body>\n");
       out.write("        <form action=\"StudentServlet\">\n");
       out.write("            <table border=\"1\" cellspacing=\"0\"  onchange=\"doSubmit()\">\n");
-      out.write("            <tr>\n");
-      out.write("                <th>ID</th>\n");
-      out.write("                <th>Name</th>\n");
-      out.write("                <th>Gender</th>\n");
-      out.write("                <th>DOB</th>\n");
-      out.write("                <th></th>\n");
-      out.write("            </tr>\n");
-      out.write("            ");
+      out.write("                <tr>\n");
+      out.write("                    <th>ID</th>\n");
+      out.write("                    <th>Name</th>\n");
+      out.write("                    <th>Gender</th>\n");
+      out.write("                    <th>DOB</th>\n");
+      out.write("                    <th></th>\n");
+      out.write("                </tr>\n");
+      out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("        </table>\n");
+      out.write("            </table>\n");
       out.write("        </form>\n");
       out.write("        \n");
       out.write("        <a href=\"createStudent.jsp\">Create</a>\n");
@@ -121,38 +121,38 @@ public final class jspStudent_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("                <tr>\n");
-          out.write("                    <td>");
+          out.write("                    <tr>\n");
+          out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                    <td>");
+          out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                    <td>");
+          out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.gender==true?\"Male\":\"Female\"}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                    <td>");
+          out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.dob}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                    <td>\n");
-          out.write("                        ");
+          out.write("                        <td>\n");
+          out.write("                            ");
           if (_jspx_meth_c_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\n");
-          out.write("                        <a href=\"");
+          out.write("                            <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${StudentDetail}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">Update</a>\n");
-          out.write("                        \n");
-          out.write("                        ");
+          out.write("\n");
+          out.write("                            ");
           if (_jspx_meth_c_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\n");
-          out.write("                        <a href=\"");
+          out.write("                            <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${StudentDelete}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\"  onclick=\"return confirm('Delete confirmation?')\">Delete</a>\n");
-          out.write("                    </td>\n");
-          out.write("                </tr>\n");
-          out.write("            ");
+          out.write("                        </td>\n");
+          out.write("                    </tr>\n");
+          out.write("                ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -192,15 +192,15 @@ public final class jspStudent_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
       do {
         out.write("\n");
-        out.write("                            ");
+        out.write("                                ");
         if (_jspx_meth_c_param_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                            ");
+        out.write("                                ");
         if (_jspx_meth_c_param_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                        ");
+        out.write("                            ");
         int evalDoAfterBody = _jspx_th_c_url_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -275,15 +275,15 @@ public final class jspStudent_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
       do {
         out.write("\n");
-        out.write("                            ");
+        out.write("                                ");
         if (_jspx_meth_c_param_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                            ");
+        out.write("                                ");
         if (_jspx_meth_c_param_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                        ");
+        out.write("                            ");
         int evalDoAfterBody = _jspx_th_c_url_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

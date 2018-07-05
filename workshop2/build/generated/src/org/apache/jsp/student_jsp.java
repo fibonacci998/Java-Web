@@ -153,10 +153,8 @@ public final class student_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.gender}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("<input type=\"checkbox\" ");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.gender==true?\"selected\":\"\"}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("                        <td><input type=\"checkbox\" onclick=\"return false;\" ");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.gender==true?\"checked\":\"\"}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write(" ></td>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.dob}", java.lang.String.class, (PageContext)_jspx_page_context, null));
