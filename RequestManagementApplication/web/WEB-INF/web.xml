@@ -4,9 +4,17 @@
         <servlet-name>EmployeeServlet</servlet-name>
         <servlet-class>controller.EmployeeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProcessServlet</servlet-name>
+        <servlet-class>controller.ProcessServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>EmployeeServlet</servlet-name>
         <url-pattern>/EmployeeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcessServlet</servlet-name>
+        <url-pattern>/ProcessServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

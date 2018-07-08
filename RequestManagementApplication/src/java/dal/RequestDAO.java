@@ -45,7 +45,7 @@ public class RequestDAO {
         String query="SELECT RequestID, EmployeeName, TypeName,[From],[To],Reason,Status FROM dbo.Requests \n" +
         "JOIN dbo.Employees ON Employees.EmployeeID = Requests.EmployeeID\n" +
         "JOIN dbo.RequestTypes ON RequestTypes.TypeID = Requests.TypeID\n" +
-        "WHERE  Employees.EmployeeID=1 "+id;
+        "WHERE  Employees.EmployeeID="+id;
         Connection conn= new DBContext().getConnection();
         ResultSet rs=conn.prepareStatement(query).executeQuery();
         while (rs.next()){

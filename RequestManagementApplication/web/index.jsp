@@ -28,7 +28,7 @@
                     <option value="${a.employeeID}" ${param.idSelected==a.employeeID?"selected":""}>${a.employeeName}</option>
                 </c:forEach>            
             </select> 
-            
+         
             <table border="1" cellspacing="1">
                 <tr>
                     <th>Employee Name</th>
@@ -40,9 +40,6 @@
                 </tr>
                 <c:forEach var="a" items="${listByID}">
                     <tr>
-                        <c:url value="">
-                            <c:param name="idChange" value="${a.resquestID}"/>
-                        </c:url>
                         <td>${a.employeeName}</td>
                         <td>${a.typeName}</td>
                         <td><fmt:formatDate value="${a.dateFrom}" pattern="dd/MM/yyyy"/></td>
@@ -50,8 +47,9 @@
                         <td>${a.reason}</td>
                         <c:if test="${a.status eq 'Processing'}">
                         <td>
-                            <input type="submit" name="btnApprove" value="Approve"/>
-                            <input type="submit" name="btnReject" value="Reject"/>
+                            <input type="hidden" name="idInfo" value="${a.resquestID}">
+                            <input type="submit" name="action" value="Approve" />
+                            <input type="submit" name="action" value="Reject"/>
                         </td>
                         </c:if>
                         <c:if test="${a.status ne 'Processing'}">
@@ -60,6 +58,6 @@
                     </tr>
                 </c:forEach>
             </table>
-        </form>
+        </form> 
     </body>
 </html>

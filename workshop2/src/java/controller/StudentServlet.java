@@ -38,7 +38,12 @@ public class StudentServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int number=Integer.parseInt(request.getParameter("txtNumber"));
+            int number=0;
+            try {
+                number=Integer.parseInt(request.getParameter("txtNumber"));
+            } catch (Exception e) {
+            }
+            
             studentDAO dao=new studentDAO();
             List<Student> list=dao.selectfirst(number);
             request.setAttribute("listStudent", list);

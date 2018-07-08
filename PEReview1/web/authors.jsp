@@ -15,9 +15,9 @@
     <body>
         <jsp:useBean id="authorsBean" class="bean.AuthorBean" scope="request"/>
         <jsp:useBean id="listBookBean" class="bean.TitleAuthorBean" scope="request"/>
-        <jsp:setProperty name="listBookBean" property="auID" value="${param.authorID}"/>
         <jsp:setProperty name="authorsBean" property="titleID" value="${param.titleID}"/>
-        <form action="authors.jsp">
+        <jsp:setProperty name="listBookBean" property="auID" value="${param.authorID}"/>
+        <form action="authors.jsp" name="main_form">
             <h2>Select an author</h2>
             <select name="authorID" onchange="document.forms[0].submit()">
                 <c:forEach var="e" items="${authorsBean.selectAll()}">
@@ -27,6 +27,9 @@
                 </c:forEach>
             </select>
             
+            <c:if test="${empty param.authorID}">
+                <jsp:setProperty name="listBookBean" property="auID" value="172-32-1176"/>
+            </c:if>
             <p>List of accounts</p>
             <c:if test="${not empty listBookBean.selectByID()}">
                 <table cellspacing="0" border="1">

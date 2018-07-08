@@ -14,6 +14,11 @@
     </head>
     <body>
         <form action="StudentServlet">
+            <c:if test="${empty listStudent}">
+                <script>
+                    //document.forms[0].submit();
+                </script>
+            </c:if>
             <p>
                 Number of Students:
                 <input type="text" name="txtNumber">

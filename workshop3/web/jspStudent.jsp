@@ -14,6 +14,11 @@
     </head>
     <body>
         <form action="StudentServlet">
+            <c:if test="${empty listStudent}">
+                <script>
+                    document.forms[0].submit();
+                </script>
+            </c:if>
             <table border="1" cellspacing="0"  onchange="doSubmit()">
                 <tr>
                     <th>ID</th>
