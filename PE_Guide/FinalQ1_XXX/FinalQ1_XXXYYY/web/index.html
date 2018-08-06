@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="StudentServlet">
+            <h1>Enter information of new student</h1>
+            Student ID <input type="text" name="txtID"/>
+            <p>
+            Student Name <input type="text" name="txtName"/>
+            <p>
+            Student gender
+            <input name="rdGender" value="Male" type="radio">Male
+            <input name="rdGender" value="Female" type="radio">Female
+            <input name="rdGender" value="Other" type="radio">Other
+            <p>
+            Student Address <textarea name="txtAddress"></textarea>
+            <p>
+            Is Actived <input type="checkbox" name="chkIsActived"/>
+            <p>
+            <input type="reset" name="btnReset" value="Reset"/>
+            <input type="submit" name="btnSave" value="Save"/>
+        </form>
+    </body>
+</html>

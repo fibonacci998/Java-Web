@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="JavaScript" type="text/javascript" src="./js/jquery.js"></script>
+    </head>
+    <body>
+        Name <input type="text" id="fullname"/>
+        <input type="button" value="Hello" id="btHello"/>
+        <br>
+        <span id="result"></span>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#btHello').click(function(){
+                   var fullname=$('#fullname').val();
+                   $.ajax({
+                       type: 'post',
+                       url:'/ajaxServlet',
+                       data:{fullname: fullname},
+                       success:function(html){
+                           $('#result').html(result);
+                       }
+                   })
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -3,13 +3,20 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.Date;
 
 public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
+Date today=new Date();
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/header.jsp");
+  }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -22,6 +29,10 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
 
     PageContext pageContext = null;
     HttpSession session = null;
+    Throwable exception = org.apache.jasper.runtime.JspRuntimeLibrary.getThrowable(request);
+    if (exception != null) {
+      response.setStatus((Integer)request.getAttribute("javax.servlet.error.status_code"));
+    }
     ServletContext application = null;
     ServletConfig config = null;
     JspWriter out = null;
@@ -32,7 +43,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
-      			null, true, 8192, true);
+      			"error.htm", true, 8192, true);
       _jspx_page_context = pageContext;
       application = pageContext.getServletContext();
       config = pageContext.getServletConfig();
@@ -50,11 +61,40 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body> \n");
+      out.write("        \n");
       out.write("        ");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "header.jsp", out, false);
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<style type=\"text/css\">\n");
+      out.write("    table{width:100%;border:none;}\n");
+      out.write("    a{text-decoration: none;color:blur;padding: 15px;}\n");
+      out.write("</style>\n");
+      out.write("<table>\n");
+      out.write("    <tr>\n");
+      out.write("        <td><img src=\"media/logo.jpg\"></td>\n");
+      out.write("    </tr>\n");
+      out.write("    <tr>\n");
+      out.write("        <td align=\"center\">\n");
+      out.write("            <a href=\"#\">Home</a>\n");
+      out.write("            <a href=\"#\">New</a>\n");
+      out.write("            <a href=\"#\">Courses</a>\n");
+      out.write("        </td>\n");
+      out.write("    </tr>\n");
+      out.write("</table>\n");
+      out.write("<p>\n");
+      out.write("    Today is ");
+      out.print(today);
+      out.write("\n");
+      out.write("</p>");
       out.write("\n");
       out.write("        <h1>Content of page goes here</h1>\n");
+      out.write("        <p>Today is ");
+      out.print(today);
+      out.write("</p>\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "footer.html", out, false);
       out.write("\n");

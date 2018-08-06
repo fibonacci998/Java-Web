@@ -46,7 +46,7 @@ public class EmployeeServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             String action=request.getParameter("action");
             String id=request.getParameter("idInfo");
-            if (id!=null){
+            if (id!=null && action!=null){
                 if (action.equals("Approve")){
                     StatusDAO sttDao=new StatusDAO();
                     sttDao.approveRequest(id);

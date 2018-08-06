@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <form>
+            Name <input type="text" id="fullname">
+            <input type="button" value="Hello" id="bttHello">
+            <br>
+            <span id="result1"></span>
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#bttHello').click(function(){
+                    var fullname=$('#fullname').val();
+                    $.ajax({
+                        type:'POST',
+                        data:{fullname: fullname},
+                        url:'AjaxController',
+                        success:function(result){
+                            $('#result1').html(result);
+                        }
+                    });
+                });
+            });
+            
+        </script>
+    </body>
+</html>
